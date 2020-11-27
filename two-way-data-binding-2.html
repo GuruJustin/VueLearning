@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<div id = "app">
+
+    <form action = "">
+        <div class = "col-sm-6">
+            <input v-model="options" type = "text" class = "form-control"/>
+        </div>
+
+        <fieldset class = "form-group">
+            <legend>Radio buttons</legend>
+            <div class = "form-check">
+                <label class = "form-check-label">
+                    <input v-model="options"  type = "checkbox" class = "form-control" name = "optionRadios" id = "optionsRadio1" value = "option-1" checked/>
+                    Options one
+                </label>
+            </div>
+            <div class = "form-check">
+                <label class = "form-check-label">
+                    <input v-model="options" type = "checkbox" class = "form-control" name = "optionRadios" id = "optionsRadio2" value = "option-2" checked />
+                    Options two
+                </label>
+            </div>
+            <div class = "form-check">
+                <label class = "form-check-label">
+                    <input v-model="options" type = "checkbox" class = "form-control" name = "optionRadios" id = "optionsRadio3" value = "option-3" checked />
+                    Options three
+                </label>
+            </div>
+        </fieldset>
+    </form>
+    <h1>You selected {{options.join(', ')}}</h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+        el : '#app',
+        data : () => ({
+            options : [],
+            message : 'hello'
+        })
+    })
+</script>
+</html>
