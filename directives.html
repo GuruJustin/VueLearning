@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<div id = "app">
+    <a v-bind:href = "url">{{url}}</a>
+    <h1 @click="number++">{{number}}</h1>
+    <h1 @click="number--">Decrease</h1>
+
+    <form action = "" @submit.prevent="number++">
+        <button type="sumbit">SUBMIT</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+    new Vue({
+        el : '#app',
+        data : () => ({
+            url : 'https://edwindiaz.com',
+            number : 0
+        })
+    })
+</script>
+</html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <div id = "app">
-    <div class = "static" :class="{active: act}">{{message}}</div>
+    <div>{{message}}</div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
@@ -10,9 +11,12 @@
         el : '#app',
         data : () => ({
             message : 'hello',
-            act : true,
-            url : 'https://edwindiaz.com'
-        })
+        }),
+        computed :{
+            reverseMessage() {
+                return this.message.split('').reverse('').join('');
+            }
+        }
     })
 </script>
 
