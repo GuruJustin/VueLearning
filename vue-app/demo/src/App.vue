@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <router-link class = "nav-link" :to="'/'">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link class = "nav-link" :to="'/contact'">CONTACT</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,7 +35,8 @@
         </form>
       </div>
     </nav>
-    <posts-example :posts = "posts"/>
+
+    <router-view></router-view>
 
   </div>
 </template>
@@ -43,22 +44,18 @@
 <script>
 import HelloWorld from './components/HelloWorld'
 import PostsExample from './components/Posts';
+import Contact from './components/Contacts'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     PostsExample,
+    Contact,
      
   },
   data(){
     return {
-      posts : [
-        {id:1, title:"post1"},
-        {id:2, title:"post2"},
-        {id:3, title:"post3"},
-        {id:4, title:"post4"}
-      ]
     }
   }
 }

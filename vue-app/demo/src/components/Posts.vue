@@ -16,7 +16,7 @@
                     <td>{{post.completed}}</td>
                 </tr>
             </tbody>
-            </table>
+        </table>
     </div>
 </template>
 <script>
@@ -29,11 +29,9 @@ export default {
     ],
     data() {
         return {
-
         }
     },
     created() {
-
         axios.get('https://jsonplaceholder.typicode.com/todos').then( posts =>{
             this.posts = posts.data;
         })

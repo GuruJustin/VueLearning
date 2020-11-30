@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import Posts from './components/Posts'
+import Contacts from './components/Contacts'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -12,6 +13,10 @@ const routes = [
   {
     path:'/',
     component : Posts,
+  }, 
+  {
+    path:'/contact',
+    component : Contacts
   }
 ]
 
